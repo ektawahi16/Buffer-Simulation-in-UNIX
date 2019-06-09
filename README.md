@@ -9,21 +9,20 @@ Programming Language  - C++
 ## HEADER FILE - BUFFER.h
 
 It defines the basic structure of a buffer in the buffer cache.
-
-The defined integer constants are the possible values that the 'status' of the buffer may take:
-	Free	 - the buffer is free	
-	Locked	 - the buffer is being used by a process
-	Invalid	 - the buffer has invalid data
-	DelWr	 - the buffer is marked for delayed write
-	ProcWait - a process is waiting for this buffer to become free.
+The defined integer constants are the possible values that the 'status' of the buffer may take-
+* Free	 - the buffer is free	
+* Locked- - the buffer is being used by a process
+* Invalid- the buffer has invalid data
+* DelWr	 - the buffer is marked for delayed write
+* ProcWait - a process is waiting for this buffer to become free.
 
 The structure of a buffer comprises of:
-	blockNumber	- the disk block number of which it has content
-	status		- the status of the buffer	
-	hash_next	- pointer to next buffer on the hash queue
-	hash_prev	- pointer to the previous buffer on hash queue
-	free_next	- pointer to the next free buffer on free list	
-	free_prev	- pointer to the previous free buffer on free list
+* blockNumber	- the disk block number of which it has content
+* status- the status of the buffer	
+* hash_next- pointer to next buffer on the hash queue
+* hash_prev- pointer to the previous buffer on hash queue
+* free_next- pointer to the next free buffer on free list	
+* free_prev- pointer to the previous free buffer on free list
 
 The possible functions of a buffer:
 	a default constructor
